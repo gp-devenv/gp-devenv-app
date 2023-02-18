@@ -16,6 +16,8 @@ FROM ghcr.io/gp-devenv/gp-angular-devenv:22.04-18-15-1
 USER vscode
 WORKDIR /workspace
 
+RUN git config --global --add safe.directory /workspace
+
 EXPOSE 80
 
 ENTRYPOINT [ "sudo", "/entrypoint.sh" ]
